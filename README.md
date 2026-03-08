@@ -2,31 +2,34 @@
 
 macOS Keychain secret manager with Touch ID -- for developers and AI agents.
 
-## Install both (app + CLI)
+## Install
 
 ```bash
 brew tap no-box-dev/noxkey
-brew install --cask noxkey   # menu bar app
-brew install noxkey           # CLI tool
-```
-
-Or just the CLI (if you build the app from source):
-
-```bash
-brew tap no-box-dev/noxkey
-brew install noxkey
+brew install --cask noxkey   # menu bar app → /Applications
+brew install noxkey           # CLI tool → noxkey command
 ```
 
 ## What gets installed
 
 | Package | Type | What |
 |---|---|---|
-| `noxkey` (formula) | CLI | `noxkey` command in your terminal |
 | `noxkey` (cask) | App | NoxKey.app in /Applications |
+| `noxkey` (formula) | CLI | `noxkey` command in your terminal |
 
 The CLI communicates with the app over a local Unix socket. The app must be running for CLI commands to work.
 
+## Verify security
+
+After installing, run:
+
+```bash
+noxkey verify
+```
+
+This checks that NoxKey has no outbound network access, is properly sandboxed, and secrets never leave your machine.
+
 ## Links
 
-- [NoxKey repo](https://github.com/No-Box-Dev/Noxkey)
+- [NoxKey](https://noboxdev.com/tools/noxkey)
 - [No-Box-Dev](https://noboxdev.com)
