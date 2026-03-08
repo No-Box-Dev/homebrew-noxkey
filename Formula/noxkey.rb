@@ -1,7 +1,7 @@
 class Noxkey < Formula
   desc "macOS Keychain secret manager with Touch ID — CLI component"
-  homepage "https://noboxdev.com/tools/noxkey"
-  url "https://github.com/No-Box-Dev/Noxkey/releases/download/v0.1.0/nbox-cli"
+  homepage "https://noxkey.ai"
+  url "https://releases.noxkey.ai/v0.1.0/noxkey-cli"
   sha256 "d5e6795cb5d9685e447a4d8d1a90a73470886d7025a6339390a97460fc9324a6"
   version "0.1.0"
   license :cannot_represent
@@ -9,7 +9,7 @@ class Noxkey < Formula
   depends_on :macos
 
   def install
-    bin.install "nbox-cli" => "noxkey"
+    bin.install "noxkey-cli" => "noxkey"
   end
 
   def caveats
