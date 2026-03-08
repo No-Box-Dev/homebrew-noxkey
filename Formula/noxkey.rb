@@ -1,9 +1,10 @@
 class Noxkey < Formula
   desc "macOS Keychain secret manager with Touch ID — CLI component"
-  homepage "https://github.com/No-Box-Dev/Noxkey"
-  url "https://github.com/No-Box-Dev/Noxkey/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-  license "MIT"
+  homepage "https://noboxdev.com/tools/noxkey"
+  url "https://github.com/No-Box-Dev/Noxkey/releases/download/v0.1.0/nbox-cli"
+  sha256 "d5e6795cb5d9685e447a4d8d1a90a73470886d7025a6339390a97460fc9324a6"
+  version "0.1.0"
+  license :cannot_represent
 
   depends_on :macos
 
@@ -14,14 +15,13 @@ class Noxkey < Formula
   def caveats
     <<~EOS
       The NoxKey menu bar app must be running for the CLI to work.
-      Download it from: https://github.com/No-Box-Dev/Noxkey/releases
+      Install it with: brew install --cask no-box-dev/noxkey/noxkey
 
       Make sure the app is running before using `noxkey` commands.
     EOS
   end
 
   test do
-    # CLI prints usage when called with no args
     assert_match "Usage:", shell_output("#{bin}/noxkey 2>&1", 1)
   end
 end

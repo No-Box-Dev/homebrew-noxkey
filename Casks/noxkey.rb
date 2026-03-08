@@ -5,16 +5,11 @@ cask "noxkey" do
   url "https://github.com/No-Box-Dev/Noxkey/releases/download/v#{version}/NoxKey-#{version}.dmg"
   name "NoxKey"
   desc "macOS Keychain secret manager with Touch ID"
-  homepage "https://github.com/No-Box-Dev/Noxkey"
+  homepage "https://noboxdev.com/tools/noxkey"
 
   depends_on macos: ">= :ventura"
 
   app "NoxKey.app"
-
-  postflight do
-    # The app auto-installs the CLI to ~/.local/bin/noxkey on launch,
-    # but also install via the formula for users who want it immediately
-  end
 
   zap trash: [
     "~/Library/Application Support/NoxKey",
