@@ -12,6 +12,12 @@ class Noxkey < Formula
     bin.install "noxkey-cli" => "noxkey"
   end
 
+  def post_install
+    # Remove legacy CLI copy left by old installCLI() auto-install
+    old = Pathname.new(Dir.home) / ".local/bin/noxkey"
+    old.delete if old.exist?
+  end
+
   def caveats
     <<~EOS
       The NoxKey menu bar app must be running for the CLI to work.
