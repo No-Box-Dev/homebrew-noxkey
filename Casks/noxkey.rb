@@ -1,6 +1,6 @@
 cask "noxkey" do
-  version "0.6.19"
-  sha256 "9e4664e5a1b8b518adc9f4c2ac3e326b417abe4e36a2f538b49c373a2fe40a8b"
+  version "0.6.20"
+  sha256 "f02524e506bc86929193fe1719b395675ebc2711e4d568df82b4bcfa2e04f973"
 
   url "https://releases.noxkey.ai/v#{version}/NoxKey-#{version}.dmg?source=homebrew"
   name "NoxKey"
@@ -14,5 +14,6 @@ cask "noxkey" do
   zap trash: [
     "~/Library/Application Support/NoxKey",
     "~/Library/Preferences/com.noboxdev.NoxKey.plist",
+    "~/.config/noxkey",
   ]
 end
