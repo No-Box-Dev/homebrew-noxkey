@@ -1,6 +1,6 @@
 cask "noxkey" do
-  version "0.6.20"
-  sha256 "f02524e506bc86929193fe1719b395675ebc2711e4d568df82b4bcfa2e04f973"
+  version "0.6.21"
+  sha256 "083301da0ba0ab524abf59e79dd24da64f2ca5cdb98f0a7fcfb4fda322babbc6"
 
   url "https://releases.noxkey.ai/v#{version}/NoxKey-#{version}.dmg?source=homebrew"
   name "NoxKey"
