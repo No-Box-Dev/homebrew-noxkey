@@ -1,17 +1,21 @@
 cask "noxkey" do
-  version "0.8.6"
-  sha256 "2a667e6846cc7423ec33af8df10f94e7623b114e2710ed0cda2d090705832b28"
-  url "https://releases.noxkey.ai/v#{version}/NoxKey-#{version}.dmg?source=homebrew"
+  version "0.8.7"
+  sha256 "922e2ee9fa350e6e44737ed2148b26cc9aef77ce9ed4c546e318ce5848e1cd9a"
+  url "https://releases.noxkey.ai/v#{version}/NoxKey-#{version}.pkg?source=homebrew"
   name "NoxKey"
   desc "macOS Keychain secret manager with Touch ID"
   homepage "https://noxkey.ai"
   depends_on macos: ">= :ventura"
-  app "NoxKey.app"
-  binary "NoxKey.app/Contents/Resources/noxkey-cli", target: "noxkey"
-  uninstall quit: "dev.noboxdev.Noxkey"
+  pkg "NoxKey-#{version}.pkg"
+  uninstall quit: "dev.noboxdev.Noxkey",
+            pkgutil: "dev.noboxdev.NoxKey.pkg",
+            delete: [
+              "/Applications/NoxKey.app",
+            ]
   zap trash: [
     "~/Library/Application Support/NoxKey",
     "~/Library/Preferences/com.noboxdev.NoxKey.plist",
     "~/.config/noxkey",
+    "~/.local/bin/noxkey",
   ]
 end
