@@ -1,6 +1,6 @@
 cask "noxkey" do
-  version "0.8.34"
-  sha256 "bbff41c0bb10d39824f95357a2107123a972dfeafc2231dcd3780b0fb3e18bfa"
+  version "0.8.35"
+  sha256 "b246cc464c2c8cd9e628e84764a8de7cbaf5352a62a4b186ba10b242492b2d09"
   url "https://releases.noxkey.ai/v#{version}/NoxKey-#{version}.pkg?source=homebrew"
   name "NoxKey"
   desc "macOS Keychain secret manager with Touch ID"
