@@ -1,9 +1,9 @@
 class Noxkey < Formula
   desc "macOS Keychain secret manager with Touch ID — CLI component"
   homepage "https://noxkey.ai"
-  url "https://releases.noxkey.ai/v0.8.40/noxkey-cli?source=homebrew"
-  sha256 "eb796802d677890f5c829ffdc94a973dcc51c8f75bdc29dc91f12777a1e3d790"
-  version "0.8.40"
+  url "https://releases.noxkey.ai/v0.8.41/noxkey-cli?source=homebrew"
+  sha256 "85a494888cc98f9512b8036207a7382de1b2eba6c2a564bea99d2a41e4429fc6"
+  version "0.8.41"
   license :cannot_represent
   depends_on :macos
   def install
